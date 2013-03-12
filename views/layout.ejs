@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ZFeed</title>
+
+		<!-- Viewport mobile tag for sensible mobile support -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+		<!-- JavaScript and stylesheets from your assets folder are included here -->
+		<%- assets.css() %>
+		<%- assets.js() %>
+	</head>
+
+	<body>
+		<script id="entry-template" type="text/x-dustjs-template">
+          <div class='clip'></div>
+          <p>
+              <a class="link" target=_blank href="{link}">{title}</a>
+              <br><br>
+              <span class="desc">
+                  {desc}
+              </span>
+          </p>
+        </script>
+        <div class='feed'>
+            <span class='link' id='loading'>Loading...</span>
+        </div>
+	</body>
+</html>

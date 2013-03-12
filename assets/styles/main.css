@@ -1,0 +1,63 @@
+body {
+    height:100%;
+    background: url('/images/debut_dark.png') repeat;
+}
+
+a {
+    outline: 0;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    background-color: #373737;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3); 
+    border-radius: 4px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.feed {
+    max-width: 800px;
+    font-family: arial, sans-serif;
+    padding: 50px;
+    margin: 0px auto;
+}
+
+.entry {
+    margin: 150px 0px;
+}
+
+.clip {
+    display: none;
+}
+
+.selected .clip {
+    display: block;
+    background-color: #888;
+    position:absolute;
+    margin-left: -30px;
+    width: 8px;
+    height: 100px;
+}
+
+.read .link, .read .desc{
+    color: #999;
+}
+
+.link, .selected .link {
+    color: #DDD;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.desc, .selected .desc {
+    color: #CCC;
+    font-size: 16px;
+}
