@@ -7,10 +7,8 @@ var FeedController = {
 	index: function (req,res) {
 		var auth = req.session.googleAuth
 		getFeed(auth, function(err, feed){
-            if(err)
-                return console.log(err)
             console.log('get feed')
-            if(feed.err){
+            if(err || feed.err){
                 req.session.googleAuth = null
                 req.session.save()
             }
@@ -41,7 +39,7 @@ function clean(xml) {
 }
 
 function filter(json) {
-    if (!json) {
+    if (!json || !json.feed) {
         return {err:'reauth'}
     }
     if(!json.feed.entry)

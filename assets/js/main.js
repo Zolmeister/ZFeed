@@ -68,7 +68,7 @@ $.fn.markRead = function () {
     if(markedRead.indexOf(item)!==-1)
         return this
     markedRead.push(item)
-    $.get('/read&id='+id+'&source='+source)
+    $.get('/read?id='+id+'&source='+source)
     return this
 }
 
