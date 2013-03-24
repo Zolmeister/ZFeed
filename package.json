@@ -4,7 +4,9 @@
     "version": "0.0.0",
     "description": "a Sails application",
     "dependencies": {
-        "sails": "0.8.89-1"
+        "sails": "0.8.89-1",
+	"request" : "*",
+	"xml2js": "*"
     },
     "scripts": {
         "start": "node .app.js",
